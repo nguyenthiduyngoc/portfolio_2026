@@ -13,7 +13,7 @@
     --nen:#f4c9d6; --hong:#e88aab; --hong-dam:#d76b92; --den:#171417;
     --chu:#4a3b43; --xam:#8a7681; --trang:#fff;
     --bong:0 12px 28px rgba(120,60,85,.18); --bong-sm:0 6px 16px rgba(120,60,85,.16);
-    --display:"Playfair Display",Georgia,serif; --script:"Dancing Script",cursive; --sans:"Poppins",-apple-system,"Segoe UI",sans-serif;
+    --display:"Playfair Display",Georgia,serif; --script:"Dancing Script",cursive; --sans:"Poppins","Segoe UI",Roboto,-apple-system,system-ui,"Helvetica Neue",Arial,sans-serif;
   }
   *{ box-sizing:border-box; margin:0; padding:0; }
   html{ scroll-behavior:smooth; }
@@ -57,7 +57,7 @@
   .vitem{ display:flex; flex-direction:column; align-items:center; width:165px; }
   .vphone{ width:100%; aspect-ratio:9/16; border-radius:20px; background:var(--den); padding:4px; box-shadow:var(--bong); position:relative; transition:transform .2s; }
   .vphone:hover{ transform:translateY(-4px); }
-  .vphone .scr{ width:100%; height:100%; border-radius:16px; background:#000; object-fit:cover; cursor:pointer; display:block; }
+  .vphone .scr{ width:100%; height:100%; border-radius:16px; background:#000; object-fit:cover; display:block; accent-color:var(--hong-dam); }
   .vphone .playhint{ position:absolute; inset:4px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:1.7rem; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.6); pointer-events:none; transition:.2s; }
   .vitem .cap{ margin-top:10px; font-family:var(--script); color:var(--hong-dam); font-size:1.05rem; text-align:center; line-height:1.2; }
   .imgs{ display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
@@ -106,20 +106,20 @@
   <div class="cat-desc">Clip UGC review mỹ phẩm cho kênh bán lẻ <b>Bonmie Cosmetics</b>: giới thiệu công dụng, chất sản phẩm &amp; trải nghiệm thực tế theo phong cách gần gũi — tối ưu để chốt đơn.</div>
   <div class="cat-rule"></div>
   <div class="vids">
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon01.jpg" src="media/bon01.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Bông tẩy trang LA SOIRÉE</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon02.jpg" src="media/bon02.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Candid 0.3%</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon03.jpg" src="media/bon03.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Dưỡng nách Alpha Arbutin</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon04.jpg" src="media/bon04.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Inner</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon05.jpg" src="media/bon05.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Kem dưỡng Pretty Skin B5</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon06.jpg" src="media/bon06.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Kem dưỡng tay chân Vaseline</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon07.jpg" src="media/bon07.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Kem dưỡng ẩm Embryolisse</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon08.jpg" src="media/bon08.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">LOVELY CC</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon09.jpg" src="media/bon09.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Mascara NongChat</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon10.jpg" src="media/bon10.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Mặt nạ Sena Demar</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon11.jpg" src="media/bon11.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">SERUM CARYOPHY</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon12.jpg" src="media/bon12.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Serum Maxclinic Vita 10 (Màu cam)</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon13.jpg" src="media/bon13.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">TTBC Quế Hồi</span></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon14.jpg" src="media/bon14.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">XKN So Natural</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon01.jpg" src="media/bon01.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Bông tẩy trang LA SOIRÉE</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon02.jpg" src="media/bon02.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Candid 0.3%</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon03.jpg" src="media/bon03.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Dưỡng nách Alpha Arbutin</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon04.jpg" src="media/bon04.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Inner</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon05.jpg" src="media/bon05.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Kem dưỡng Pretty Skin B5</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon06.jpg" src="media/bon06.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Kem dưỡng tay chân Vaseline</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon07.jpg" src="media/bon07.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Kem dưỡng ẩm Embryolisse</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon08.jpg" src="media/bon08.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">LOVELY CC</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon09.jpg" src="media/bon09.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Mascara NongChat</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon10.jpg" src="media/bon10.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Mặt nạ Sena Demar</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon11.jpg" src="media/bon11.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">SERUM CARYOPHY</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon12.jpg" src="media/bon12.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">Serum Maxclinic Vita 10 (Màu cam)</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon13.jpg" src="media/bon13.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">TTBC Quế Hồi</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon14.jpg" src="media/bon14.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div><span class="cap">XKN So Natural</span></div>
   </div>
   <div class="more-wrap"><button class="more-btn" type="button">Xem thêm &#9660;</button></div>
 </section>
@@ -129,11 +129,11 @@
   <div class="cat-desc">Video storytelling cho kênh bán sỉ <b>Kỳ Kim Group</b>: có diễn viên, lời thoại &amp; tình huống kể chuyện — truyền tải câu chuyện nguồn sỉ mỹ phẩm chính hãng.</div>
   <div class="cat-rule"></div>
   <div class="vids">
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky01.jpg" src="media/ky01.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky02.jpg" src="media/ky02.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky03.jpg" src="media/ky03.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky04.jpg" src="media/ky04.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky05.jpg" src="media/ky05.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky01.jpg" src="media/ky01.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky02.jpg" src="media/ky02.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky03.jpg" src="media/ky03.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky04.jpg" src="media/ky04.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky05.jpg" src="media/ky05.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
   </div>
   <div class="more-wrap"><button class="more-btn" type="button">Xem thêm &#9660;</button></div>
 </section>
@@ -143,11 +143,11 @@
   <div class="cat-desc">Những thước phim đời thường nơi công sở, chân thật &amp; gần gũi theo phong cách vlog.</div>
   <div class="cat-rule"></div>
   <div class="vids">
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog01.jpg" src="media/vlog01.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog02.jpg" src="media/vlog02.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog03.jpg" src="media/vlog03.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog04.jpg" src="media/vlog04.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog05.jpg" src="media/vlog05.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog01.jpg" src="media/vlog01.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog02.jpg" src="media/vlog02.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog03.jpg" src="media/vlog03.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog04.jpg" src="media/vlog04.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog05.jpg" src="media/vlog05.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
   </div>
   <div class="more-wrap"><button class="more-btn" type="button">Xem thêm &#9660;</button></div>
 </section>
@@ -157,11 +157,11 @@
   <div class="cat-desc">Hậu trường quay dựng — góc nhìn phía sau mỗi sản phẩm, gồm cả những buổi chụp có khách mời đặc biệt.</div>
   <div class="cat-rule"></div>
   <div class="vids">
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts01.jpg" src="media/bts01.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts02.jpg" src="media/bts02.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts03.jpg" src="media/bts03.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts04.jpg" src="media/bts04.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
-    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts05.jpg" src="media/bts05.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts01.jpg" src="media/bts01.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts02.jpg" src="media/bts02.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts03.jpg" src="media/bts03.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts04.jpg" src="media/bts04.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts05.jpg" src="media/bts05.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video></div></div>
   </div>
   <div class="more-wrap"><button class="more-btn" type="button">Xem thêm &#9660;</button></div>
 </section>

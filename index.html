@@ -25,7 +25,7 @@
     --bong-sm:  0 6px 16px rgba(120,60,85,.16);
     --display:  "Playfair Display", Georgia, serif;
     --script:   "Dancing Script", cursive;
-    --sans:     "Poppins", -apple-system, "Segoe UI", sans-serif;
+    --sans:     "Poppins", "Segoe UI", Roboto, -apple-system, system-ui, "Helvetica Neue", Arial, sans-serif;
   }
   *{ box-sizing:border-box; margin:0; padding:0; }
   html{ scroll-behavior:smooth; }
@@ -86,7 +86,7 @@
   .logo-sig{ display:flex; align-items:center; }
   .logo-sig svg{ height:40px; width:auto; color:var(--hong-dam); display:block; }
   .nav-links{ display:flex; gap:22px; align-items:center; }
-  .nav-links a{ font-weight:600; font-size:.92rem; }
+  .nav-links a{ font-family:var(--sans); font-weight:600; font-size:.92rem; }
   .nav-links a:hover{ color:var(--hong-dam); }
   .nav-links .btn{ padding:8px 18px; }
   .nav-links a.nav-ext{ color:var(--hong-dam); text-decoration:underline; text-underline-offset:4px; text-decoration-thickness:2px;
@@ -141,7 +141,7 @@
   .board{ position:relative; background:linear-gradient(160deg,#f7cfdb,#efb9cc);
     border-radius:26px; box-shadow:var(--bong); padding:40px; overflow:hidden;
     display:grid; grid-template-columns:1.05fr .95fr; gap:30px; align-items:center; }
-  .board .name .display{ font-size:clamp(2.1rem,6.5vw,4rem); }
+  .board .name .display{ display:block; font-size:clamp(2.1rem,6.5vw,4rem); text-wrap:balance; }
   .board .name .script{ font-size:clamp(2.2rem,7vw,3.6rem); display:block; margin-top:-6px; }
   .board .name .fullname{ font-weight:600; color:var(--chu); margin-top:4px; letter-spacing:.03em; }
   .board .name .role{ margin-top:12px; }
@@ -207,7 +207,7 @@
   .ana .big .row{ display:flex; align-items:center; gap:16px; }
   .ana .big .ic{ font-size:1.8rem; }
   .ana .big .num{ font-family:var(--display); color:var(--hong-dam); font-size:1.9rem; line-height:1; }
-  .ana .big .lbl{ font-family:var(--script); color:var(--chu); font-size:1.1rem; }
+  .ana .big .lbl{ font-family:var(--sans); color:var(--chu); font-size:1rem; font-weight:500; }
   .ana .pills{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
   .ana .pill{ background:var(--hong); color:#fff; border-radius:14px; padding:16px; text-align:center; box-shadow:var(--bong-sm); }
   .ana .pill .p{ font-family:var(--display); font-size:1.15rem; }
@@ -298,7 +298,7 @@
   .vphone:nth-child(even){ transform:rotate(2deg); margin-top:16px; }
   .vphone .scr{ width:100%; height:100%; border-radius:16px; background:linear-gradient(160deg,#ffd8e6,#ffe9d6);
     display:flex; align-items:center; justify-content:center; color:var(--hong-dam); font-weight:600; text-align:center; font-size:.78rem; padding:8px; }
-  .vphone video.scr{ object-fit:cover; cursor:pointer; background:#000; }
+  .vphone video.scr{ object-fit:cover; background:#000; accent-color:var(--hong-dam); }
   .vphone .playhint{ position:absolute; inset:4px; border-radius:16px; display:flex; align-items:center;
     justify-content:center; font-size:1.8rem; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.6);
     pointer-events:none; transition:.2s; }
@@ -490,7 +490,7 @@
       <div class="pill"><div class="p">2 kênh</div><div class="s">TIKTOK XÂY TỪ 0</div></div>
       <div class="pill"><div class="p">4–5 clip</div><div class="s">MỖI TUẦN</div></div>
       <div class="pill"><div class="p">TikTok</div><div class="s">ANALYTICS</div></div>
-      <div class="pill"><div class="p">Data</div><div class="s">TƯ DUY DRIVEN</div></div>
+      <div class="pill"><div class="p">Data</div><div class="s">DRIVEN MINDSET</div></div>
     </div>
   </div>
 </section>
@@ -553,29 +553,19 @@
   <div class="vids">
     <!-- Bấm vào clip để xem. Slot 5 để trống, Mi chọn sau. -->
     <div class="vphone" title="Kem dưỡng Pretty Skin B5 (Bonmie)">
-      <video class="scr" poster="media/slot1.jpg" src="media/slot1.mp4" muted loop playsinline preload="none"
-        onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video>
-      <span class="playhint">▶</span>
+      <video class="scr" poster="media/slot1.jpg" src="media/slot1.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video>
     </div>
     <div class="vphone" title="Kỳ Kim – Code 32">
-      <video class="scr" poster="media/slot2.jpg" src="media/slot2.mp4" muted loop playsinline preload="none"
-        onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video>
-      <span class="playhint">▶</span>
+      <video class="scr" poster="media/slot2.jpg" src="media/slot2.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video>
     </div>
     <div class="vphone" title="Candid 0.3% (Bonmie)">
-      <video class="scr" poster="media/slot3.jpg" src="media/slot3.mp4" muted loop playsinline preload="none"
-        onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video>
-      <span class="playhint">▶</span>
+      <video class="scr" poster="media/slot3.jpg" src="media/slot3.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video>
     </div>
     <div class="vphone" title="Hậu trường — Gia đình anh Quách Ngọc Tuyên (Bống Baby House)">
-      <video class="scr" poster="media/slot4.jpg" src="media/slot4.mp4" muted loop playsinline preload="none"
-        onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video>
-      <span class="playhint">▶</span>
+      <video class="scr" poster="media/slot4.jpg" src="media/slot4.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video>
     </div>
     <div class="vphone" title="Bao bì sản phẩm (Sài Gòn Trade)">
-      <video class="scr" poster="media/slot5.jpg" src="media/slot5.mp4" muted loop playsinline preload="none"
-        onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video>
-      <span class="playhint">▶</span>
+      <video class="scr" poster="media/slot5.jpg" src="media/slot5.mp4" controls controlslist="nodownload noplaybackrate" playsinline preload="none"></video>
     </div>
   </div>
 </section>
@@ -636,6 +626,13 @@
 </section>
 
 <footer>© 2026 Nguyễn Thị Duy Ngọc · Content Creator · Social Media</footer>
+
+<script>
+  // Mỗi lúc chỉ 1 clip phát (clip mới bật thì tạm dừng clip đang chạy) — tránh chồng tiếng
+  document.addEventListener('play', function(e){
+    document.querySelectorAll('video').forEach(function(v){ if(v !== e.target){ v.pause(); } });
+  }, true);
+</script>
 
 </body>
 </html>
