@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery · Nguyễn Thị Duy Ngọc — Sản phẩm &amp; Dự án</title>
+<meta name="description" content="Gallery sản phẩm của Nguyễn Thị Duy Ngọc — review sản phẩm, storytelling, vlog, hậu trường & ấn phẩm thiết kế." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --nen:#f4c9d6; --hong:#e88aab; --hong-dam:#d76b92; --den:#171417;
+    --chu:#4a3b43; --xam:#8a7681; --trang:#fff;
+    --bong:0 12px 28px rgba(120,60,85,.18); --bong-sm:0 6px 16px rgba(120,60,85,.16);
+    --display:"Playfair Display",Georgia,serif; --script:"Dancing Script",cursive; --sans:"Poppins",-apple-system,"Segoe UI",sans-serif;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:var(--sans); color:var(--chu); line-height:1.6;
+    background:var(--nen)
+      radial-gradient(circle at 20% 15%, rgba(255,255,255,.35), transparent 40%),
+      radial-gradient(circle at 85% 60%, rgba(255,255,255,.25), transparent 45%);
+    background-attachment:fixed; overflow-x:clip; }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  .wrap{ width:min(1120px,92%); margin-inline:auto; }
+  section{ padding:38px 0; }
+  .display{ font-family:var(--display); font-weight:600; color:var(--den); line-height:1.02; letter-spacing:.005em; }
+  .script{ font-family:var(--script); color:var(--hong-dam); font-weight:700; }
+  .mark-den{ background:var(--den); color:#fff; padding:4px 14px; border-radius:8px; display:inline-block; font-weight:600; font-family:var(--sans); font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; }
+  .mark-hong{ background:var(--hong); color:#fff; padding:4px 14px; border-radius:8px; display:inline-block; font-weight:600; font-family:var(--sans); font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; }
+  .star{ width:22px; color:#fff; filter:drop-shadow(0 2px 3px rgba(120,60,85,.3)); }
+  .deco{ position:absolute; pointer-events:none; z-index:4; }
+  header.nav{ position:sticky; top:0; z-index:50; background:rgba(244,201,214,.85); backdrop-filter:blur(10px); border-bottom:1px solid rgba(255,255,255,.5); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
+  .logo{ font-family:var(--script); font-weight:700; font-size:1.7rem; color:var(--hong-dam); line-height:1; }
+  .logo-sig{ display:flex; align-items:center; }
+  .logo-sig svg{ height:38px; width:auto; color:var(--hong-dam); display:block; }
+  .nav-inner a.back{ font-weight:600; color:var(--den); font-size:.9rem; }
+  .nav-inner a.back:hover{ color:var(--hong-dam); }
+  .hero{ text-align:center; padding-top:32px; padding-bottom:6px; position:relative; }
+  .hero .display{ font-size:clamp(2.4rem,9vw,4.6rem); }
+  .hero .script{ font-size:clamp(1.9rem,7vw,3.3rem); display:block; margin-top:-6px; }
+  .hero p{ max-width:640px; margin:14px auto 0; }
+  .hero .stats{ display:flex; gap:22px; justify-content:center; flex-wrap:wrap; margin-top:20px; }
+  .hero .stats .st{ text-align:center; }
+  .hero .stats .n{ font-family:var(--display); font-weight:700; color:var(--hong-dam); font-size:1.6rem; line-height:1; }
+  .hero .stats .l{ font-size:.72rem; color:var(--xam); letter-spacing:.04em; text-transform:uppercase; }
+  .cat{ padding-top:12px; }
+  .cat-head{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px; }
+  .cat-head .t{ font-family:var(--display); font-weight:600; color:var(--den); font-size:clamp(1.5rem,4.5vw,2.1rem); }
+  .cat-head .s{ font-family:var(--script); color:var(--hong-dam); font-size:1.4rem; }
+  .cat-desc{ color:var(--chu); max-width:720px; margin-bottom:22px; font-size:.94rem; }
+  .cat-rule{ height:3px; background:linear-gradient(90deg,var(--hong),transparent); border-radius:3px; margin-bottom:22px; }
+  .vids{ display:flex; flex-wrap:wrap; justify-content:center; gap:28px 18px; }
+  .vitem{ display:flex; flex-direction:column; align-items:center; width:165px; }
+  .vphone{ width:100%; aspect-ratio:9/16; border-radius:20px; background:var(--den); padding:4px; box-shadow:var(--bong); position:relative; transition:transform .2s; }
+  .vphone:hover{ transform:translateY(-4px); }
+  .vphone .scr{ width:100%; height:100%; border-radius:16px; background:#000; object-fit:cover; cursor:pointer; display:block; }
+  .vphone .playhint{ position:absolute; inset:4px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:1.7rem; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.6); pointer-events:none; transition:.2s; }
+  .vitem .cap{ margin-top:10px; font-family:var(--script); color:var(--hong-dam); font-size:1.05rem; text-align:center; line-height:1.2; }
+  .imgs{ display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+  .icard{ width:230px; background:#fff; padding:10px; border-radius:14px; box-shadow:var(--bong-sm); display:block; transition:transform .2s; }
+  .icard:hover{ transform:translateY(-4px); }
+  .icard .thumb{ display:flex; align-items:center; justify-content:center; aspect-ratio:1; background:#faf3f6; border-radius:8px; overflow:hidden; }
+  .icard .thumb img{ max-width:100%; max-height:100%; object-fit:contain; }
+  .empty-note{ text-align:center; color:var(--xam); font-style:italic; padding:26px; background:#fff; border:2px dashed var(--hong); border-radius:16px; }
+  .more-wrap{ text-align:center; margin-top:24px; }
+  .more-btn{ display:inline-block; padding:10px 28px; border-radius:999px; font-weight:700; cursor:pointer; border:2px solid var(--den); color:var(--den); background:#fff; font-size:.9rem; transition:.2s; }
+  .more-btn:hover{ background:var(--den); color:#fff; }
+  .backcta{ text-align:center; }
+  .btn{ display:inline-block; padding:12px 26px; border-radius:999px; font-weight:700; border:2px solid var(--den); color:var(--den); background:#fff; }
+  .btn:hover{ background:var(--den); color:#fff; }
+  footer{ text-align:center; padding:30px 0 46px; color:var(--chu); font-size:.86rem; }
+  @media(max-width:400px){ .vitem{ width:44%; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c1 6 5 10 12 12-7 2-11 6-12 12-1-6-5-10-12-12 7-2 11-6 12-12z"/></symbol>
+</svg>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo-sig">
+      <img src="media/signature.png" alt="Chữ ký Duy Ngọc" style="height:40px; width:auto;">
+    </div>
+    <a href="index.html" class="back">← Về trang chính</a>
+  </div>
+</header>
+<section class="wrap hero">
+  <svg class="star deco" style="top:24px; left:8%; color:var(--hong);"><use href="#star"/></svg>
+  <svg class="star deco" style="top:58px; right:10%; color:var(--hong-dam);"><use href="#star"/></svg>
+  <span class="display">Gallery</span>
+  <span class="script">sản phẩm &amp; dự án</span>
+  <p>Nơi mình lưu trữ những sản phẩm đã làm — review sản phẩm, storytelling, vlog, hậu trường &amp; ấn phẩm thiết kế. Bấm vào từng clip để xem nhé!</p>
+  <div class="stats">
+    <div class="st"><div class="n">2</div><div class="l">Kênh xây từ 0</div></div>
+    <div class="st"><div class="n">15+</div><div class="l">Clip / tháng</div></div>
+    <div class="st"><div class="n">100%</div><div class="l">Tự quay &amp; dựng</div></div>
+  </div>
+</section>
+
+<section class="wrap cat">
+  <div class="cat-head"><span class="mark-hong">UGC · REVIEW</span><span class="t">Review sản phẩm</span><span class="s">— Bonmie</span></div>
+  <div class="cat-desc">Clip UGC review mỹ phẩm cho kênh bán lẻ <b>Bonmie Cosmetics</b>: giới thiệu công dụng, chất sản phẩm &amp; trải nghiệm thực tế theo phong cách gần gũi — tối ưu để chốt đơn.</div>
+  <div class="cat-rule"></div>
+  <div class="vids">
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon01.jpg" src="media/bon01.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Bông tẩy trang LA SOIRÉE</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon02.jpg" src="media/bon02.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Candid 0.3%</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon03.jpg" src="media/bon03.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Dưỡng nách Alpha Arbutin</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon04.jpg" src="media/bon04.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Inner</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon05.jpg" src="media/bon05.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Kem dưỡng Pretty Skin B5</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon06.jpg" src="media/bon06.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Kem dưỡng tay chân Vaseline</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon07.jpg" src="media/bon07.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Kem dưỡng ẩm Embryolisse</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon08.jpg" src="media/bon08.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">LOVELY CC</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon09.jpg" src="media/bon09.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Mascara NongChat</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon10.jpg" src="media/bon10.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Mặt nạ Sena Demar</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon11.jpg" src="media/bon11.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">SERUM CARYOPHY</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon12.jpg" src="media/bon12.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">Serum Maxclinic Vita 10 (Màu cam)</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon13.jpg" src="media/bon13.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">TTBC Quế Hồi</span></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bon14.jpg" src="media/bon14.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div><span class="cap">XKN So Natural</span></div>
+  </div>
+  <div class="more-wrap"><button class="more-btn" type="button">Xem thêm &#9660;</button></div>
+</section>
+
+<section class="wrap cat">
+  <div class="cat-head"><span class="mark-den">STORYTELLING</span><span class="t">Video kể chuyện</span><span class="s">— Kỳ Kim</span></div>
+  <div class="cat-desc">Video storytelling cho kênh bán sỉ <b>Kỳ Kim Group</b>: có diễn viên, lời thoại &amp; tình huống kể chuyện — truyền tải câu chuyện nguồn sỉ mỹ phẩm chính hãng.</div>
+  <div class="cat-rule"></div>
+  <div class="vids">
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky01.jpg" src="media/ky01.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky02.jpg" src="media/ky02.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky03.jpg" src="media/ky03.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky04.jpg" src="media/ky04.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/ky05.jpg" src="media/ky05.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+  </div>
+  <div class="more-wrap"><button class="more-btn" type="button">Xem thêm &#9660;</button></div>
+</section>
+
+<section class="wrap cat">
+  <div class="cat-head"><span class="mark-hong">VLOG</span><span class="t">Vlog</span><span class="s">— Sài Gòn Trade</span></div>
+  <div class="cat-desc">Những thước phim đời thường nơi công sở, chân thật &amp; gần gũi theo phong cách vlog.</div>
+  <div class="cat-rule"></div>
+  <div class="vids">
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog01.jpg" src="media/vlog01.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog02.jpg" src="media/vlog02.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog03.jpg" src="media/vlog03.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog04.jpg" src="media/vlog04.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/vlog05.jpg" src="media/vlog05.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+  </div>
+  <div class="more-wrap"><button class="more-btn" type="button">Xem thêm &#9660;</button></div>
+</section>
+
+<section class="wrap cat">
+  <div class="cat-head"><span class="mark-den">BEHIND THE SCENE</span><span class="t">Hậu trường</span></div>
+  <div class="cat-desc">Hậu trường quay dựng — góc nhìn phía sau mỗi sản phẩm, gồm cả những buổi chụp có khách mời đặc biệt.</div>
+  <div class="cat-rule"></div>
+  <div class="vids">
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts01.jpg" src="media/bts01.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts02.jpg" src="media/bts02.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts03.jpg" src="media/bts03.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts04.jpg" src="media/bts04.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+    <div class="vitem"><div class="vphone"><video class="scr" poster="media/bts05.jpg" src="media/bts05.mp4" muted loop playsinline preload="none" onclick="this.paused?this.play():this.pause()" onplay="this.nextElementSibling.style.opacity=0" onpause="this.nextElementSibling.style.opacity=1"></video><span class="playhint">&#9654;</span></div></div>
+  </div>
+  <div class="more-wrap"><button class="more-btn" type="button">Xem thêm &#9660;</button></div>
+</section>
+
+<section class="wrap cat">
+  <div class="cat-head"><span class="mark-hong">DESIGN</span><span class="t">Hình ảnh khác</span><span class="s">— ấn phẩm</span></div>
+  <div class="cat-desc">Các ấn phẩm mình thiết kế trên Canva: thumbnail review, banner khuyến mãi, bảng giá sỉ… (bấm vào ảnh để xem full).</div>
+  <div class="cat-rule"></div>
+  <div class="imgs">
+    <a class="icard" href="media/img01.jpg" target="_blank" rel="noopener"><span class="thumb"><img src="media/img01.jpg" alt="Ấn phẩm thiết kế" loading="lazy"></span></a>
+    <a class="icard" href="media/img02.jpg" target="_blank" rel="noopener"><span class="thumb"><img src="media/img02.jpg" alt="Ấn phẩm thiết kế" loading="lazy"></span></a>
+    <a class="icard" href="media/img03.jpg" target="_blank" rel="noopener"><span class="thumb"><img src="media/img03.jpg" alt="Ấn phẩm thiết kế" loading="lazy"></span></a>
+    <a class="icard" href="media/img04.jpg" target="_blank" rel="noopener"><span class="thumb"><img src="media/img04.jpg" alt="Ấn phẩm thiết kế" loading="lazy"></span></a>
+    <a class="icard" href="media/img05.jpg" target="_blank" rel="noopener"><span class="thumb"><img src="media/img05.jpg" alt="Ấn phẩm thiết kế" loading="lazy"></span></a>
+  </div>
+  <div class="more-wrap"><button class="more-btn" type="button">Xem thêm &#9660;</button></div>
+</section>
+
+<section class="wrap backcta">
+  <a href="index.html" class="btn">← Quay lại trang chính</a>
+</section>
+<footer>© 2026 Nguyễn Thị Duy Ngọc · Content Creator · Social Media</footer>
+<script>
+  // Chỉ 1 clip chạy tại 1 thời điểm
+  document.addEventListener('play', function(e){
+    document.querySelectorAll('video').forEach(function(v){ if(v !== e.target){ v.pause(); } });
+  }, true);
+  // Hiện hàng đầu tiên + nút Xem thêm / Rút gọn cho từng category
+  document.querySelectorAll('.cat').forEach(function(cat){
+    var items = Array.prototype.slice.call(cat.querySelectorAll('.vids .vitem, .imgs .icard'));
+    var wrap = cat.querySelector('.more-wrap');
+    var btn  = cat.querySelector('.more-btn');
+    if(items.length === 0){ if(wrap) wrap.style.display = 'none'; return; }
+    var expanded = false;
+    function firstRowN(){
+      items.forEach(function(it){ it.style.display = ''; });
+      var top = items[0].offsetTop, n = 0;
+      for(var i=0;i<items.length;i++){ if(Math.abs(items[i].offsetTop - top) < 4){ n++; } else { break; } }
+      return n;
+    }
+    function render(){
+      var n = firstRowN();
+      if(items.length <= n){ if(wrap) wrap.style.display = 'none'; return; }
+      if(wrap) wrap.style.display = '';
+      if(expanded){ items.forEach(function(it){ it.style.display = ''; }); btn.innerHTML = 'Rút gọn &#9650;'; }
+      else { items.forEach(function(it,i){ it.style.display = i < n ? '' : 'none'; }); btn.innerHTML = 'Xem thêm &#9660;'; }
+    }
+    btn.addEventListener('click', function(){ expanded = !expanded; render(); if(!expanded){ cat.scrollIntoView({behavior:'smooth', block:'start'}); } });
+    render();
+    var t; window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(function(){ if(!expanded){ render(); } }, 200); });
+  });
+</script>
+</body>
+</html>
